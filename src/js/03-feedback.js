@@ -11,11 +11,11 @@ initForm();
 form.addEventListener('input', throttle(onFormInputs, 500));
 form.addEventListener('submit', onSubmit);
 
-function onSubmit() {
+function onSubmit(evt) {
   evt.preventDefault();
   localStorage.removeItem(STORAGE_KEY);
-  evt.currentTarget.reset();
   console.log(data);
+  evt.currentTarget.reset();
 }
 
 function onFormInputs(evt) {

@@ -17,7 +17,7 @@ function onSubmit(evt) {
 }
 
 function onFormInputs(evt) {
-  localData = localStorage.getItem(STORAGE_KEY);
+  let localData = localStorage.getItem(STORAGE_KEY);
 
   try {
     localData = localData ? JSON.parse(localData) : {};
